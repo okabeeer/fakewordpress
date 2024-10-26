@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+a {
+    text-decoration: none;
+      color: inherit;
+}
+li,a,button{
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 8%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white; 
+    z-index: 1000;
+}
+span{
+    color: #e15f41;
+}
+.logo{
+    margin-right: auto;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.nav_links{
+    list-style: none;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    color: rgba(0,137,169, 1);
+}
+button{
+    padding: 9px 25px;
+    background-color: rgba(0,137,169, 1);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.btn1{
+    background-color:transparent;
+    color:  rgba(0,137,169, 1);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.btn1:hover{
+    background-color: transparent;
+}
+button:hover{
+    background-color: rgba(0,137,169, 0.8);
+}
+
+/* Header content styling */
+.header-content {
+    padding-top: 100px; 
+    width: 100%;
+    min-height: 90vh;
+    background-image: linear-gradient(rgba(0, 47, 77, 0.65), rgba(0, 33, 77, 0.65)), url('/assets/images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+.content{
+    color: white;
+    padding: 200px 8%;
+    text-align: left;
+    max-width: 900px;
+}
+.header-content h1 {
+    font-size:70px;
+    font-weight: 600;
+    line-height: 85px;
+    margin-bottom: 25px;
+}
+
+.header-content p {
+    font-size: 20px;
+    line-height: 30px
+}
+
+/* Button styling */
+.btn {
+    margin-top:30px ;
+    padding: 20px 30px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.btn:hover {
+    border: 1px solid rgba(0,137,169, 1);
+    color: white;
+    background-color: rgba(0,137,169, 1);
+}
+header .fa-solid{
+    display: none;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li, a, button {
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 8%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+
+span {
+    color: #e15f41;
+}
+
+.logo {
+    margin-right: auto;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: rgba(0, 137, 169, 1);
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 137, 169, 1);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.btn1 {
+    background-color: transparent;
+    color: rgba(0, 137, 169, 1);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.btn1:hover {
+    background-color: transparent;
+}
+
+button:hover {
+    background-color: rgba(0, 137, 169, 0.8);
+}
+
+/* Header content styling */
+.header-content {
+    padding-top: 100px; 
+    width: 100%;
+    min-height: 90vh;
+    background-image: linear-gradient(rgba(0, 47, 77, 0.65), rgba(0, 33, 77, 0.65)), url('/assets/images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.content {
+    color: white;
+    padding: 200px 8%;
+    text-align: left;
+    max-width: 900px;
+}
+
+.header-content h1 {
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 85px;
+    margin-bottom: 25px;
+}
+
+.header-content p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/* Button styling */
+.btn {
+    margin-top: 30px;
+    padding: 20px 30px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.btn:hover {
+    border: 1px solid rgba(0, 137, 169, 1);
+    color: white;
+    background-color: rgba(0, 137, 169, 1);
+}
+
+header .fa-solid {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 835px) {
+    header {
+        padding: 20px 4%;
+    }
+}
+
+@media (max-width: 760px) {
+    header .fa-solid {
+        font-size: 20px;
+        display: block;
+        text-align: left;
+        padding: 20px 20px;
+        cursor: pointer;
+    }
+
+    .nav_links {
+        position: absolute;
+        padding-top: 0;
+        text-align: center;
+        background-color: white;
+        width: 200px;
+        height: 100vh;
+        top: 0px;
+        right: -200px;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    .nav_links.show {
+        right: 0; 
+    }
+
+    .nav_links li {
+        display: block;
+        text-align: left;
+        padding: 10px 20px;
+    }
+
+    .header-content {
+        padding-top: 60px; 
+    }
+
+    .content {
+        padding: 100px 5%; 
+    }
+
+    .header-content h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .header-content p {
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 30px; 
+        line-height: 40px;
+    }
+
+    .header-content p {
+        font-size: 16px; 
+    }
+
+    .btn {
+        padding: 15px 20px; 
+    }
+}
+@media (max-width: 390px) {
+    header {
+        padding: 20px 1%;
+    }
+    button {
+        font-size: 12px; /* Font size adjustment for readability */
+    }
+    .logo {
+        font-size: 19px;
+    }
+    header .fa-solid {
+        font-size: 15px;
+    }
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+/*-------Course------*/
+.Course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.Course h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.Course p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.courses-grid {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(20% * 5); /* Width of all items */
+}
+
+.course-item {
+    flex: 0 0 33.33%; /* Show three items in a line */
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 10px; /* Space between items */
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.course-item img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.course-item h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.course-item p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Slider buttons */
+.prev, .next {
+    position: absolute;
+    background-color: black;
+    color: white; 
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    padding: 10px 20px;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    margin-top: -300px;
+}
+.prev {
+    left: 90px; /* Adjust as needed */
+
+}
+.next {
+    right: 90px; /* Adjust as needed */
+
+}
+
+.prev:hover, .next:hover {
+    background-color:  rgba(0,137,169, 0.8);
+}
+
+
+/* Prevent button from moving with the slider */
+.slider {
+    position: relative; /* Required for absolute positioning of buttons */
+}
+
+
+
+
