@@ -384,11 +384,11 @@ header .fa-solid {
 .course-item {
     flex: 0 0 33.33%; /* Show three items in a line */
     background-color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     margin: 0 10px; /* Space between items */
     padding-bottom: 20px;
     box-sizing: border-box;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    border: solid 2px lightgray;
 }
 
 .course-item img {
@@ -444,5 +444,9 @@ header .fa-solid {
 }
 
 
+.slider{
+    padding: 10px;
+    background-color: white;
+}
 
 
