@@ -492,7 +492,7 @@ img {
     margin: 0;
     padding: 5px;
     color: whitesmoke;
-    transition: 5s;
+    transition: 1s;
 }
 
 .courses-grid {
@@ -512,7 +512,7 @@ img {
     border-radius: 10px;
     box-sizing: border-box;
     overflow: hidden;
-    transition: 5s;
+    transition: 1s;
 }
 .course-item img {
     width: 100%;
@@ -527,7 +527,7 @@ img {
     left: 50%;
     transform: translateX(-50%);
     top: -135%;
-    transition: 5s;
+    transition: 1s;
     padding: 7px;
     background: rgba(0, 137, 169, 0.3); /* Semi-transparent background */
     border-radius: 15px; /* Rounded corners */

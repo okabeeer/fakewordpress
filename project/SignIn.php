@@ -42,7 +42,7 @@ $url= $client->createAuthUrl();
                 <h1>Sign In</h1>
                 <div class="social-icons">
                 <a href="index.php" class="icon"><i class='bx bx-home-alt-2'></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="<?= $url ?>" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
                 </div>
                 <span>or use your email password</span>
                 <input type="email" placeholder="Email">
