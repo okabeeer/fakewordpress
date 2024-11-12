@@ -1,74 +1,59 @@
 <?php
-require __DIR__ ."/vendor/autoload.php";
-$client = new Google\Client;
+session_start();
+// Connexion à la base de données
+$servername = "localhost";
+$username = "root"; 
+$password = ""; 
+$dbname = "dawm"; 
 
-$client-> setClientId("987309453270-5psup4obanoq707c75e637246vu62ig0.apps.googleusercontent.com");
-$client-> setClientSecret("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");
-$client->setRedirectUri("http://localhost/redirect.php");
-$client->addScope("email");
-$client->addScope("profile");
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-$url= $client->createAuthUrl();
+// Vérification de la connexion
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
+// Vérification si le formulaire a été soumis
+if (isset($_POST["submit"])) {
+    // Récupérer les données du formulaire
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Requête SQL pour vérifier l'utilisateur
+    $sql = "SELECT * FROM `User` WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email); 
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        // Utilisateur trouvé
+        $user = $result->fetch_assoc();
+        
+        // Vérifier le mot de passe
+        if (password_verify($password, $user['password'])) {
+            // Connexion réussie
+            session_start(); 
+            $_SESSION['userID'] = $user['userID']; // Stocker l'ID de l'utilisateur dans la session
+            $_SESSION['email'] = $user['email']; // Stocker l'email de l'utilisateur dans la session
+            header("Location: dashboard.php"); 
+            exit();
+        } else {
+            // Mot de passe incorrect
+            $_SESSION['error'] = "Incorrect password";
+           header("location: register.php");
+           exit();
+        }
+    } else {
+        // Utilisateur non trouvé
+        $_SESSION['error'] = "Email not found";
+        header("location: register.php");
+        exit();
+    }
+
+    $stmt->close();
+}
+
+$conn->close();
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Sign In Dawm Agency</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        <link rel="stylesheet" href="assets/css/sigin1.css">
-    </head>
-    <body>
-    <div class="container" id="container">
-        <div class="form-container sign-up">
-            <form action="index.html">
-                <h1>Create Account</h1>
-                <div class="social-icons">
-                    <a href="index.php" class="icon"><i class='bx bx-home-alt-2'></i></a>
-                    <a href="<?= $url ?>" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                </div>
-                <span>or use your email for registeration</span>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button>Sign Up</button>
-            </form>
-        </div>
-        <div class="form-container sign-in">
-            <form action="index.html">
-                <h1>Sign In</h1>
-                <div class="social-icons">
-                <a href="index.php" class="icon"><i class='bx bx-home-alt-2'></i></a>
-                <a href="<?= $url ?>" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                </div>
-                <span>or use your email password</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <a href="#">Forget Your Password?</a>
-                <button>Sign In</button>
-            </form>
-        </div>
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <h1>Welcome Back!</h1>
-                    <p>Your expert in creating high-performing,<br> attractive e-commerce websites.<br> Sign in to explore our services and turn your<br> vision into an online store.</p>
-                    <button class="hidden" id="login">Sign In</button>
-                </div>
-                <div class="toggle-panel toggle-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>  Welcome to DAWN Agency! Join us by signing up and gain access to personalized features, exclusive offers, and saved information. </p>
-                    <button class="hidden" id="register">Sign Up</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="assets/js/sigin1.js"></script>
-    </div>
-     
-     
-    </body>
-</html>
+

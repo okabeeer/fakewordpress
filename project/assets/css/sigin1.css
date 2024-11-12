@@ -182,3 +182,14 @@ body{
 .container.active .toggle-right{
     transform: translateX(200%);
 }
+
+.error {
+    background: #F2DEDE;
+    color: #A94442;
+    width: 40%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+  }

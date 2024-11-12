@@ -45,7 +45,7 @@
       </div>
     </nav>
     <div>
-      <a class="cta" href="Signin.php"><button>Sign Up</button></a>
+      <a class="cta" href="register.php"><button>Sign Up</button></a>
     </div>
     <i class="fa-solid fa-bars"></i>
   </header>
