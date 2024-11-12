@@ -28,7 +28,7 @@
         
       </nav>
       <div>
-        <a href="register.php"><button>Sign Up</button></a>
+        <a href="register/register.php"><button>Sign Up</button></a>
       </div>
       <i class="fa-solid fa-bars"></i>
   </header>
