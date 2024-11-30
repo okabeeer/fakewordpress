@@ -1,15 +1,16 @@
 <?php
-    include "php/send_email.php";
+include "php/send_email.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dawm Agency</title>
 
   <!-- Polices et icônes -->
- 
+
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,9 +25,10 @@
   <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/contact.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
 <body>
@@ -36,12 +38,16 @@
     <nav>
       <div class="nav_links">
         <i class="fa-solid fa-xmark"></i>
-        <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="index.php#about">About</a></li>
-          <li><a href="index.php#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>          
+        <div class="nav_links">
+          <i class="fa-solid fa-xmark"></i>
+          <ul>
+            <li><a href="index.php#home">Home</a></li>
+            <li><a href="index.php#about">About</a></li>
+            <li><a href="index.php#services">Services</a></li>
+            <li><a href="templates.php">Templates</a></li>
+            <li><a href="index.phpcontact.php">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
     <div>
@@ -73,14 +79,14 @@
             <h2>Get In Touch With Our Agents</h2>
           </div>
           <p>We’re here to help bring your vision to life! Whether you have questions about our website creation tools, need support, or just want to learn more, our team is ready to assist you. Connect with us via email, phone, or the contact form below, and we’ll respond promptly. With us, creating the website of your dreams has never been easier. Let’s start building together today!</p>
-          
+
           <!-- Détails de contact : téléphone et email -->
           <div class="row">
             <div class="col-lg-12">
-             
+
             </div>
             <div class="col-lg-12">
-              <div class="item email"  style="display: flex;gap: 20px;">
+              <div class="item email" style="display: flex;gap: 20px;">
                 <i class='bx bx-envelope' style="color:rgba(0, 137, 169, 0.8) ;font-size: 40px;"></i>
                 <h6>dawm.estn@gmail.com<br><span>Business Email</span></h6>
               </div>
@@ -118,7 +124,7 @@
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <button name="send"  type="submit" id="form-submit" class="orange-button" style="background-color: rgba(0, 137, 169, 0.8);">Send Message</button>
+                  <button name="send" type="submit" id="form-submit" class="orange-button" style="background-color: rgba(0, 137, 169, 0.8);">Send Message</button>
                 </fieldset>
               </div>
             </div>
@@ -134,9 +140,6 @@
       </div>
     </div>
   </div>
- 
-
-
-
 </body>
+
 </html>

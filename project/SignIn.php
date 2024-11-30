@@ -36,7 +36,7 @@ if (isset($_POST["submit"])) {
             session_start(); 
             $_SESSION['userID'] = $user['userID']; // Stocker l'ID de l'utilisateur dans la session
             $_SESSION['email'] = $user['email']; // Stocker l'email de l'utilisateur dans la session
-            header("Location: dashboard.php"); 
+            header("Location: ./SellerDashboard/dashboard-sales.php"); 
             exit();
         } else {
             // Mot de passe incorrect

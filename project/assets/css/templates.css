@@ -1,0 +1,127 @@
+/*-------Template------*/
+.template {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 120px;
+}
+
+.template h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.template-grid {
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.template-item {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.template-item img {
+    height: 400px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.layer:hover {
+    background: #19262ec4;
+}
+
+.layer h3 {
+    font-weight: 500;
+    color: white;
+    font-size: 24px;
+    opacity: 0;
+    transition: 0.5s;
+    margin-bottom: 10px;
+}
+
+.layer:hover h3 {
+    opacity: 1;
+}
+
+.layer button {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    background-color: #1a73e8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+    transform: scale(1);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.layer:hover button {
+    opacity: 1;
+}
+
+.layer button:hover {
+    background-color: #155cb0;
+    transform: scale(1.05);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h1{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+
+}
+.footer p{
+    margin-bottom: 0;
+}
+.icons .fa-brands{
+    color: #19262e;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.copy{
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .template-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .template-item img {
+        height: 300px;
+    }
+}

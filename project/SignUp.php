@@ -42,7 +42,7 @@ if (isset($_POST["submit"])) {
 
         if ($stmt->execute()) {
             echo "Inscription réussie";
-            header("Location: index.php"); // Redirection après inscription réussie
+            header("Location: ./SellerDashboard/dashboard-sales.php"); // Redirection après inscription réussie
             exit(); // S'assurer que le script s'arrête après la redirection
         } else {
             $_SESSION['error'] = $stmt->error;
