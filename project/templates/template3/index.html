@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Mon E-commerce</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="images/logo.png">
+
+</head>
+
+<body>
+    <header id="header">
+        <figure class="logo">
+            <img src="images/logo.png" alt="logo">
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="products.html">Produits</a></li>
+                <li><a href="cart.html">Panier</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="carousel" id="featured-products">
+            <div class="product-list">
+                <!-- Produit 1 -->
+                <div class="item">
+                    <figure>
+                        <img src="images/product1.png" alt="Guitare électrique Eko Tribute ST100 Violette">
+                        <figcaption>Guitare électrique modèle Strat - violet</figcaption>
+                    </figure>
+                    <div class="content">
+                        <h3>Eko Tribute ST100 Violette</h3>
+                        <p class="description">
+                            La Eko Tribute ST100 est une guitare électrique aux lignes intemporelles qui ont marqué
+                            toutes les générations de guitaristes depuis les années 1950. Dotée de 3 micros simples et
+                            d'un chevalet vibrato, elle offre une grande polyvalence pour tout guitariste débutant.
+                        </p>
+                        <div class="more">
+                            <button class="add-to-cart" data-id="1" data-name="Eko Tribute ST100 Violette"
+                                data-price="129.99" data-image="images/product1.png">
+                                Ajouter au panier
+                            </button>
+                            <button>
+                                <i class="fas fa-play"></i> <a href="product.html?id=1">Voir plus</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produit 2 -->
+                <div class="item">
+                    <figure>
+                        <img src="images/product2.png" alt="Guitare électrique Eko Tribute DV300 Blue">
+                        <figcaption>Guitare électrique Type SG vintage - Bleu</figcaption>
+                    </figure>
+                    <div class="content">
+                        <h3>Eko Tribute DV300 Blue</h3>
+                        <p class="description">
+                            La Eko Tribute DV300 est une guitare au design emblématique, reconnaissable à ses deux
+                            cornes qui rendent hommage à une légende du rock. Conçue pour offrir confort, légèreté, et
+                            style, elle est idéale pour les débutants et les passionnés de musique rock et hard rock.
+                        </p>
+                        <div class="more">
+                            <button class="add-to-cart" data-id="2" data-name="Eko Tribute DV300 Blue"
+                                data-price="199.99" data-image="images/product2.png">
+                                Ajouter au panier
+                            </button>
+                            <button>
+                                <i class="fas fa-play"></i> <a href="product.html?id=2">Voir plus</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produit 3 -->
+                <div class="item">
+                    <figure>
+                        <img src="images/product3.png"
+                            alt="Guitare électrique Gretsch G5422TG Electromatic Snowcrest Orange">
+                        <figcaption>G5422TG Electromatic Classic Hollow Body</figcaption>
+                    </figure>
+                    <div class="content">
+                        <h3>Gretsch G5422TG Electromatic Snowcrest Orange</h3>
+                        <p class="description">
+                            Remaniée en 2022, la guitare électrique GRETSCH G5422TG Electromatic Classic Hollow Body
+                            Double-Cut with Bigsby and Gold Hardware (2506217512) profite de nouveaux micros FT-5E
+                            Filter’Tron et de barrages "trestle block".
+                        </p>
+                        <div class="more">
+                            <button class="add-to-cart" data-id="3"
+                                data-name="Gretsch G5422TG Electromatic Snowcrest Orange" data-price="899.99"
+                                data-image="images/product3.png">
+                                Ajouter au panier
+                            </button>
+                            <button>
+                                <i class="fas fa-play"></i> <a href="product.html?id=3">Voir plus</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="arrows">
+                <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div class="indicators">
+                <div class="number">02</div>
+                <ul>
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p style="font-size: small;">&copy; 2024 Mon E-commerce. Tous droits réservés.</p>
+    </footer>
+
+    
+    <script src="js/main.js"></script>
+    <script src="js/styles.js"></script>
+    <script src="js/header.js"></script>
+
+
+</body>
+
+</html>

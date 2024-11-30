@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Produit - Mon E-commerce</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo.png">
+
+</head>
+
+<body>
+    <header id="header">
+        <figure class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="products.html">Produits</a></li>
+                <li><a href="cart.html">Panier</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="product-details">
+        <!-- Détails du produit seront insérés ici -->
+    </main>
+
+    <script>
+        // Récupérer l'ID du produit depuis l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        const products = [
+            {
+                id: '1',
+                name: 'Eko Tribute ST100 Violette',
+                price: 129.99,
+                image: 'images/product1.png',
+                description: 'Lutherie de Qualité : Corps en peuplier, manche en érable et touche en Eko résine WPC pour une excellente jouabilité. Polyvalence Sonore : Trois micros simples avec un sélecteur 5 positions pour une variété de sonorités. Accastillage Chromé : Vibrato classique avec pontets réglables pour un réglage personnalisé de chaque corde. Conception Ergonomique : Design léger et confortable, parfait pour les débutants. Finition Brillante : Corps verni avec une finition noire élégante.'
+            },
+            {
+                id: '2',
+                name: 'Eko Tribute DV300 Blue',
+                price: 199.99,
+                image: 'images/product2.png',
+                description: "Cette guitare est idéale pour les guitaristes débutants qui veulent une guitare de qualité à un tarif abordable, tout en s'appropriant une pièce de légende. Avec la DV300, vous explorez différents styles allant du blues au hard rock, tout en bénéficiant de la fiabilité et du savoir-faire italien d'Eko. RockMa Musique propose les produits Eko au Maroc pour vous offrir le meilleur de la qualité à un prix accessible."
+            },
+            {
+                id: '3',
+                name: 'Gretsch G5422TG Electromatic Snowcrest Orange',
+                price: 899.99,
+                image: 'images/product3.png',
+                description: "La guitare classique à corps creux double coupe Electromatic® G5422TG avec Bigsby® et accastillage doré est dotée d'un corps en érable laminé avec des périmètres d'inspiration vintage et des arches raffinées, ainsi que d'un tout nouveau renfort à tréteaux pour aider à réduire les retours indésirables. En augmentant la rigidité et le contact entre le dessus et l'arrière du corps, la nouvelle conception du tréteau permet également au son d'avoir une attaque plus rapide avec plus de concentration, de claquement et de sustain accru. Associée aux tout nouveaux micros FT-5E Filter'Tron™, la voix de cette construction creuse explose avec un énorme punch corsé, un carillon classique et une présence, une clarté et une définition des notes améliorées."
+            },
+            {
+                id: '4',
+                name: 'PRS CE24 Semi Hollow Satin Burnt Amber Ebony Fretboard ',
+                price: 1699.00,
+                image: 'images/product4.png',
+                description: "Depuis l'aube du rock and roll, le claquement et la réponse provenant d'une guitare à manche vissé sont un élément essentiel du mixage. Ces attributs sont, à leur tour, devenus essentiels pour de nombreux joueurs qui tentent de raconter leur histoire à travers la musique. Le manche vissé du CE24 arbore une finition Pattern Thin et une finition nitro satinée pour une sensation naturelle et addictive. Pour maximiser davantage le son et la clarté inhérents à la guitare, le CE 24 est équipé de micros PRS 85/15, que Paul a conçus pour avoir une clarté remarquable ainsi que des aigus et des graves étendus. L'électronique se compose d'un contrôle de volume et de tonalité push/pull avec interrupteur à bascule à 3 voies pour un total de six sons classiques. Cette guitare particulière est dotée d'une touche en ébène, améliorant encore le claquement et le mordant du modèle PRS CE24. La guitare présente quelques petites bosses sur le corps et la finition satinée est usée et est devenue brillante près des micros."
+            }
+        ];
+        // Trouver le produit correspondant à l'ID
+        const product = products.find(p => p.id === productId);
+        if (product) {
+            document.getElementById('product-details').innerHTML = `
+                <h2>${product.name}</h2>
+                <img src="${product.image}" alt="${product.name}" width="250em">
+                <h2>Description</h2>
+                <p class="product-description">${product.description}</p>
+                <p class="prix">${product.price} €</p>
+                <button class="products-button add-to-cart" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">Ajouter au panier</button>
+                `;
+        } else {
+            document.getElementById('product-details').innerHTML = `<p>Produit non trouvé.</p>`;
+        }
+
+
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
+</body>
+
+</html>

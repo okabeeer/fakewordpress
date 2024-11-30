@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire</title>
+  <link rel="stylesheet" href="assets/css/form.css">
+</head>
+<body>
+  <div class="formbold-main-wrapper">
+    <!-- Author: FormBold Team -->
+    <!-- Learn More: https://formbold.com -->
+    <div class="formbold-form-wrapper">
+      <img src="./assets/images/Screenshot_2.png">
+      <form action="form.php" method="POST">
+        <div class="formbold-input-group">
+          <label for="logo" class="formbold-form-label">Logo</label>
+          <input
+            type="file"
+            name="logo"
+            id="logo"
+            class="formbold-form-input"
+            accept="image/*"
+          />
+          <p id="error-message" style="color: red; display: none;">
+            L'image doit avoir une dimension de 150x150 pixels.
+          </p>
+        </div>
+        
+  
+        <div class="formbold-input-group">
+          <label for="backgroun-color" class="formbold-form-label"> Backgroun-color </label>
+          <input
+            type="color"
+            name="backgroun-color"
+            id="backgroun-color"
+            class="formbold-form-input"
+          />
+        </div>
+  
+        <button class="formbold-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+  <script src="assets/js/form.js"></script>
+</body>
+</html>

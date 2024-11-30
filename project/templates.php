@@ -40,42 +40,42 @@
       <div class="template-item">
           <img src="assets/images/template1.png "alt="template-image">
           <div class="layer">
-              <button><a href="./templates/e-commerce/index.html" target="_blank">Preview</a></button>
+              <button><a href="./templates/template1/index.html" target="_blank">Preview</a></button>
               <button>Get Now</button>
           </div>
       </div>
       <div class="template-item">
-          <img src="assets/images/template1.jpg" alt="template-image">
+          <img src="assets/images/template2.png" alt="template-image">
           <div class="layer">
-              <button>Preview</button>
+              <button><a href="./templates/template2/index.html" target="_blank">Preview</a></button>
               <button>Get Now</button>
           </div>
       </div>
       <div class="template-item">
-          <img src="assets/images/template2.png " alt="template-image">
+          <img src="assets/images/template3.png " alt="template-image">
           <div class="layer">
-              <button>Preview</button>
+              <button><a href="./templates/template3/index.html" target="_blank">Preview</a></button>
               <button>Get Now</button>
           </div>
       </div>
       <div class="template-item">
-        <img src="assets/images/template2.png " alt="template-image">
+        <img src="assets/images/template4.png " alt="template-image">
         <div class="layer">
-            <button>Preview</button>
+            <button><a href="./templates/template4/index.html" target="_blank">Preview</a></button>
             <button>Get Now</button>
         </div>
     </div>
     <div class="template-item">
-      <img src="assets/images/template2.png " alt="template-image">
+      <img src="assets/images/template5.png " alt="template-image">
       <div class="layer">
-          <button>Preview</button>
+          <button><a href="./templates/template5/index.html" target="_blank">Preview</a></button>
           <button>Get Now</button>
       </div>
   </div>
   <div class="template-item">
-    <img src="assets/images/template2.png " alt="template-image">
+    <img src="assets/images/template6.png " alt="template-image">
     <div class="layer">
-        <button>Preview</button>
+        <button><a href="./templates/template6/index.html" target="_blank">Preview</a></button>
         <button>Get Now</button>
     </div>
 </div>

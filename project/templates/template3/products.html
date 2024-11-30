@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits - Mon E-Commerce</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="images/logo.png">
+
+</head>
+
+<body>
+    <header id="header">
+        <figure class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#">Produits</a></li>
+                <li><a href="cart.html">Panier</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="carousel">
+        <ul id="product-list" class="product-container">
+            <!-- Les produits seront ajoutés ici par JavaScript -->
+        </ul>
+    </main>
+
+    <script>
+        // Afficher les Produits sur les Pages Appropriées
+        document.addEventListener('DOMContentLoaded', () => {
+            const productList = document.getElementById('product-list');
+            products.forEach(product => {
+                const li = document.createElement('li'); 
+                li.classList.add('product-item');
+                li.innerHTML = `
+                    <a href="product.html?id=${product.id}">
+                        <img src="${product.image}" alt="${product.name}" width="100%">
+                        <h6>${product.name}</h6>
+                        <p>${product.price} €</p>
+                    </a>
+                    <button class="products-button add-to-cart" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">Ajouter au panier</button>
+                `;
+                productList.appendChild(li);
+            });
+            
+        });
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/header.js"></script>
+    
+</body>
+
+</html>
